@@ -2,4 +2,4 @@
 
 ## Progress
 
-### Har lavet det hele
+### Har lavet det hele.
