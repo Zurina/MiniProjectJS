@@ -9,7 +9,7 @@ html
             each val in locationblogs
                 p= val.info
                 p likes: #{val.likedBy.length}
-                form(method='POST' action='/like')
+                form(method='POST' action='/MiniProjectJS/like')
                     div.form-group
                         input(type='hidden', name='username', value=username)
                         input(type='hidden', name='blogID', value=val._id)
