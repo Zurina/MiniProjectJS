@@ -15,7 +15,7 @@ async function likeLocationBlog(username, blogInfo) {
 
 async function likeLocationBlogByID(username, blogID) {
     const user = await userFacade.findByUserName(username)
-    return LocationBlog.findOne({ '_id': blogID}, function (err, locationBlog){
+    return LocationBlog.findOne({ '_id': blogID}, function (err, locationBlog) {
         locationBlog.likedBy.push(user._id)
         return locationBlog.save()
     });
