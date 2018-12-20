@@ -6,8 +6,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "babel-node --presets es2015 ./bin/www",
-    "withnodemon": "nodemon & ./bin/www",
+    "start": "nodemon ./bin/www --exec babel-node -e js",
+    "withnodemon": "babel-node --presets es2015 ./bin/www",
     "test": "nodemon ./bin/www --exec babel-node -e js"
   },
   "dependencies": {
