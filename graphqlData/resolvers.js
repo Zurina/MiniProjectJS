@@ -57,6 +57,7 @@ export const resolvers = {
         return userFacade.addUser(input)
     },
     addLocationBlog: ({input}) => {
+      console.log(input)
       return blogFacade.addLocationBlog(input)
     },
     likeLocationBlog: ({username, blogID}) => {

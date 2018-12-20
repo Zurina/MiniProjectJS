@@ -4,15 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var constants = require('./constants.js/url')
+var cors = require('cors')
+
 require('./dbSetup')(constants.dbDevelopment)
 // test data
 require('./test/makeFriends')()
+
 
 
 var viewRouter = require('./routes/views/views');
 var apiRouter = require('./routes/api/api'); // api
 
 var app = express();
+
+// Cors
+app.use(cors())
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

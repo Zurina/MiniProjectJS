@@ -68,7 +68,7 @@ const schema = buildSchema(`
     }
 
     type PositionLocation {
-        coordinates: [Int]
+        coordinates: [Float]
     }
 
     type Position {
