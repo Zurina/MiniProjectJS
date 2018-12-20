@@ -9,7 +9,7 @@ const root = resolvers;
 graphqlRouter.use('/', graphqlHTTP({
     schema: schema,
     rootValue: root,
-    graphiql: true,
+    graphiql: false,
 }));
 
 module.exports = graphqlRouter
